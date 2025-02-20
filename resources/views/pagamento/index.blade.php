@@ -11,23 +11,16 @@
 
 <body>
     <div class="container py-4 px-3 mx-auto">
-        @if(session()->get('errors'))
-            <div class="alert alert-danger" role="alert">
-            {{session()->get('errors')->first()}}
-            </div>
-        @endif
-
-        
         <form action="{{route('finalizar')}}" method="post">
             @csrf
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="forma_pagamento" id="boleto" value="boleto" value="boleto" disabled>
+                <input class="form-check-input" type="radio" name="forma_pagamento" id="boleto" value="boleto" value="boleto">
                 <label class="form-check-label" for="boleto">
                     Boleto
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_credito" value="cartao_credito" disabled>
+                <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_credito" value="cartao_credito">
                 <label class="form-check-label" for="cartao_credito">
                     Cartão de Crédito
                 </label>

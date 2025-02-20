@@ -11,8 +11,6 @@
 
 <body>
     <div class="container py-4 px-3 mx-auto">
-
-
     @if (!empty($encodedImage))
         <img src="data:image/gif;base64, {{$encodedImage}}" />
         <h2>Obrigado!</h2>

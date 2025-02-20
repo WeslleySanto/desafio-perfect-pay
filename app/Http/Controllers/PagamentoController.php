@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Asaas\Api;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\Asaas\CriarUmaNovaCobranca\BillingType;
-use App\Asaas\CriarUmaNovaCobranca\Response\Errors;
-use App\Asaas\CriarUmaNovaCobranca\Payload\Payload;
 use App\Http\Requests\FinalizarPagamentoRequest;
+use App\Asaas\CriarUmaNovaCobranca\Payload\Payload;
+use App\Asaas\CriarUmaNovaCobranca\Response\Errors;
 
 class PagamentoController extends Controller
 {
@@ -33,7 +34,6 @@ class PagamentoController extends Controller
 
     public function finalizarPagamento(FinalizarPagamentoRequest $request)
     {
-        // dd($request);
         $encodedImage = '';
         
         $payload = (new Payload())->make();
