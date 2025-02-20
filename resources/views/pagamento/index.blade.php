@@ -13,13 +13,13 @@
         <form action="{{route('finalizar')}}" method="post">
             @csrf
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="forma_pagamento" id="boleto" value="boleto" value="boleto">
+                <input class="form-check-input" type="radio" name="forma_pagamento" id="boleto" value="boleto" value="boleto" disabled>
                 <label class="form-check-label" for="boleto">
                     Boleto
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_credito" value="cartao_credito">
+                <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_credito" value="cartao_credito" disabled>
                 <label class="form-check-label" for="cartao_credito">
                     Cartão de Crédito
                 </label>
